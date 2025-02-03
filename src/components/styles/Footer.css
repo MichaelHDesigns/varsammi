@@ -1,0 +1,59 @@
+/* General Footer Styles */
+footer {
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: auto; /* Makes sure the footer pushes to the bottom if content is not enough */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer p {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.footer-dev {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-dev p {
+  margin-top: 15px;
+  font-weight: bold;
+  color: black; /* Text color */
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  margin: 0 15px;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.7));
+}
+
+@media (max-width: 768px) {
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    margin: 0 10px;
+  }
+}

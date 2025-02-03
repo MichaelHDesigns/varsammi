@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.slots-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* For alternating text and image positioning */
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-line .slots-text {
+  width: 45%; /* text takes up 45% of the space */
+  text-align: center; /* Text aligned to the left for larger screens */
+}
+
+/* Slots Image Styling */
+.first-line .slots-image {
+  margin-bottom: 7%;
+  width: 35%; /* image takes up 45% of the space */
+  border-radius: 15%;
+  animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
+}
+
+/* Color Changing Animation for Box-Shadow */
+@keyframes boxShadowChange {
+  0% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #4fa3ff, 0 0 25px 5px #4fa3ff, 0 0 5px 5px #4fa3ff; /* Blue */
+  }
+  100% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+}
+
+/* Second line: image and text */
+.second-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Slots Image Styling */
+.second-line .slots-image {
+  width: 35%; /* image takes up 45% of the space */
+  border-radius: 15%;
+  animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
+}
+
+/* Color Changing Animation for Box-Shadow */
+@keyframes boxShadowChange {
+  0% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #4fa3ff, 0 0 25px 5px #4fa3ff, 0 0 5px 5px #4fa3ff; /* Blue */
+  }
+  100% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+}
+
+.second-line .slots-text {
+  width: 45%; /* text takes up 45% of the space */
+  text-align: left; /* Align text to the left for larger screens */
+}
+
+/* Text Styling */
+.slots-text h1 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.slots-text p {
+  font-size: 1.2em;
+  margin-bottom: 10%;
+}
+
+.slots-text h2 {
+  font-size: 1.8em;
+  margin: 20px 0;
+}
+
+/* Styling for social media links */
+.slots-text a {
+  color: #ff2d84; /* Pink color */
+  text-decoration: none;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+.slots-text a:hover {
+  color: white; /* Hover color is white */
+  text-shadow: 0 0 10px #ff2d84, 0 0 20px #ff2d84, 0 0 30px #ff2d84; /* Neon pink glow */
+}
+
+/* MoonShot Button styling */
+.moonshot-container {
+  margin-top: 20px;
+  text-align: center; /* Center the button */
+}
+
+.moonshot-button {
+  padding: 15px 30px;
+  background-color: black; /* Neon Green color */
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+  
+  /* Neon glow effect */
+  box-shadow: 0 0 5px 2.5px #FF007F, 0 0 13px 5px #00CFFF; /* Pink and blue neon shadow */
+  text-shadow: 0 0 2px #FF007F, 0 0 5px #00CFFF; /* Text glow */
+}
+
+.moonshot-button:hover {
+  background-color: #00CFFF; /* Hover background color (Pink neon) */
+  color: #FF007F; /* Hover text color (Black for contrast) */
+  
+  /* Opposite neon glow effect on hover */
+  box-shadow: 0 0 5px 2.5px #00CFFF, 0 0 13px 5px #FF007F; /* Blue and pink neon shadow on hover */
+  text-shadow: 0 0 5px #00CFFF, 0 0 5px #FF007F; /* Text glow on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .slots-container {
+    text-align: center;
+  }
+
+  /* First line: text and image in a stack on small screens */
+  .first-line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-line .slots-text {
+    width: 100%; /* text takes up full width */
+    text-align: center; /* Align text to the center on small screens */
+  }
+
+  .first-line .slots-image {
+    width: 100%; /* image takes up full width */
+  }
+
+  /* Second line: text and image stacked on small screens */
+  .second-line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-line .slots-text {
+    width: 100%; /* text takes up full width */
+    text-align: center; /* Align text to the center on small screens */
+  }
+
+  .second-line .slots-image {
+  margin-top: 20%;
+    width: 100%; /* image takes up full width */
+  }
+}

@@ -1,0 +1,140 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.home-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Home Image Styling */
+.home-image {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  margin: 20px;
+  border-radius: 15%;
+  animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
+}
+
+/* Color Changing Animation for Box-Shadow */
+@keyframes boxShadowChange {
+  0% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #4fa3ff, 0 0 25px 5px #4fa3ff, 0 0 5px 5px #4fa3ff; /* Blue */
+  }
+  100% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+}
+
+/* First line: image above, text below */
+.first-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.first-line .home-image {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 20px; /* Adds space between the image and text */
+}
+
+.first-line .home-text {
+  width: 80%; /* Adjust width to prevent excessive stretching */
+  text-align: center;
+}
+
+/* MoonShot Button styling */
+.moonshot-container {
+  margin-top: 20px;
+  text-align: center; /* Center the button */
+}
+
+.moonshot-button {
+  padding: 15px 30px;
+  background-color: black; /* Neon Green color */
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+  border-radius: 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
+  
+  /* Neon glow effect */
+  box-shadow: 0 0 5px 2.5px #FF007F, 0 0 13px 5px #00CFFF; /* Pink and blue neon shadow */
+  text-shadow: 0 0 2px #FF007F, 0 0 5px #00CFFF; /* Text glow */
+}
+
+.moonshot-button:hover {
+  background-color: #00CFFF; /* Hover background color (Pink neon) */
+  color: #FF007F; /* Hover text color (Black for contrast) */
+  
+  /* Opposite neon glow effect on hover */
+  box-shadow: 0 0 5px 2.5px #00CFFF, 0 0 13px 5px #FF007F; /* Blue and pink neon shadow on hover */
+  text-shadow: 0 0 5px #00CFFF, 0 0 5px #FF007F; /* Text glow on hover */
+}
+
+/* Text Styling */
+.home-text h1 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.home-text p {
+  font-size: 1.2em;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .home-container {
+    text-align: center;
+  }
+
+  /* First line: text and image in a stack on small screens */
+  .first-line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-line .home-text, .first-line .home-image {
+    width: 100%; /* make both text and image full width on mobile */
+  }
+
+  /* MoonShot Button styling for mobile */
+  .moonshot-container {
+    margin-top: 20px;
+  }
+
+  /* Second line: text and image stacked on small screens */
+  .second-line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .second-line .home-text, .second-line .home-image {
+    width: 100%; /* make both text and image full width on mobile */
+  }
+
+  .second-line .home-text h2 {
+    font-size: 1.8em;
+  }
+
+  .second-line .home-text p {
+    font-size: 1em;
+    padding: 0 20px;
+  }
+
+  .moonshot-button {
+    font-size: 1.2em;
+    padding: 12px 25px;
+  }
+}

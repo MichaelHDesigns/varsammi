@@ -1,0 +1,59 @@
+/* Main Container */
+.header-container {
+  width: 100%;
+  padding: 20px 0;
+  background-color: #000; /* Static background color */
+  text-align: center;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+/* Text Styling */
+.header-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white; /* Default text color */
+  text-align: center;
+  animation: colorChange 3s ease infinite; /* Animation to change text shadow */
+}
+
+/* Color Changing Animation using text-shadow */
+@keyframes colorChange {
+  0% {
+    text-shadow: 2px 2px 5px #ff6ac3, 0 0 25px #ff6ac3, 0 0 5px #ff6ac3; /* Pink */
+  }
+  50% {
+    text-shadow: 2px 2px 5px #4fa3ff, 0 0 25px #4fa3ff, 0 0 5px #4fa3ff; /* Blue */
+  }
+  100% {
+    text-shadow: 2px 2px 5px #ff6ac3, 0 0 25px #ff6ac3, 0 0 5px #ff6ac3; /* Pink */
+  }
+}
+
+/* Disclaimer Section */
+.disclaimer-phantom {
+  margin-top: 15px;
+  padding: 12px;
+  font-size: 0.9rem;
+  color: red;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 800px; /* Limit the max width for larger screens */
+  margin-left: auto;
+  margin-right: auto; /* Center it horizontally */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 800px) {
+  .header-text {
+    font-size: 1.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .disclaimer-phantom {
+    font-size: 0.8rem; /* Smaller font for mobile */
+    padding: 10px;
+  }
+}

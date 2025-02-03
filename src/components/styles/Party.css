@@ -1,0 +1,118 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.party-container {
+  padding: 20px;
+  text-align: center;
+}
+
+/* For the text and image staggered layout */
+.first-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first-line .party-text {
+  width: 45%; /* text takes up 45% of the space */
+  text-align: center;
+}
+
+/* Slots Image Styling */
+.first-line .party-image {
+  width: 35%; /* image takes up 45% of the space */
+  border-radius: 15%;
+  animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
+}
+
+/* Color Changing Animation for Box-Shadow */
+@keyframes boxShadowChange {
+  0% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #4fa3ff, 0 0 25px 5px #4fa3ff, 0 0 5px 5px #4fa3ff; /* Blue */
+  }
+  100% {
+    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
+  }
+}
+
+/* Text Styling */
+.party-text h1 {
+  font-size: 2em;
+  margin: 20px 0;
+}
+
+.party-text p {
+  font-size: 1.2em;
+  margin-bottom: 10%;
+}
+
+/* MoonShot Button */
+.moonshot-container {
+  margin-top: 20px;
+}
+
+.moonshot-button {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  background: #ff007f; /* Neon Pink */
+  color: #00d4ff; /* Neon Blue */
+  box-shadow: 0px 0px 15px rgba(255, 0, 127, 0.8);
+  text-align: center;
+}
+
+.moonshot-button:hover {
+  background: #00d4ff; /* Swap colors on hover */
+  color: #ff007f;
+  box-shadow: 0px 0px 15px rgba(0, 212, 255, 0.8);
+  transform: scale(1.1);
+}
+
+/* Social Links */
+.social-links {
+  margin-top: 15px;
+}
+
+.social-link {
+  display: inline-block;
+  margin-right: 15px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #ff007f;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #00d4ff;
+  text-shadow: 0px 0px 10px rgba(0, 212, 255, 0.8);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .party-container {
+    text-align: center;
+  }
+
+  /* First line: text and image in a stack on small screens */
+  .first-line {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .first-line .party-text, .first-line .party-image {
+    width: 100%; /* make both text and image full width on mobile */
+  }
+}
