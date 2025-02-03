@@ -7,6 +7,7 @@ const Party = () => {
       {/* First line: text left and image right */}
       <div className="first-line">
         <div className="party-text">
+        <img src="/images/club.webp" alt="Club" className="party-image" />
           <h1>Join the Varsammi Party!</h1>
           <p>The party doesn't stop when you win with Varsammi. Step into the crypto scene, spin the wheels of fortune, and enjoy every moment with a community that knows how to celebrate big wins. Varsammi isn't just a meme coin, it's the life of the party!</p>
           
@@ -18,7 +19,6 @@ const Party = () => {
           </div> */}
 
         </div>
-        <img src="/images/club.webp" alt="Club" className="party-image" />
       </div>
     </div>
   );

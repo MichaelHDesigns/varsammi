@@ -12,25 +12,28 @@ body {
   align-items: center;
   text-align: center;
   padding: 20px;
+  justify-content: center;
+  min-height: 100vh; /* Centering the content vertically */
 }
 
-/* For alternating text and image positioning */
+/* First line: text and image */
 .first-line {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .first-line .slots-text {
-  width: 45%; /* text takes up 45% of the space */
-  text-align: center; /* Text aligned to the left for larger screens */
+  width: 80%; /* Adjust width to fit the content */
+  text-align: center; /* Align text in the center */
 }
 
-/* Slots Image Styling */
 .first-line .slots-image {
-  margin-bottom: 7%;
-  width: 35%; /* image takes up 45% of the space */
+  width: 43%; /* Adjust image width */
   border-radius: 15%;
+  margin-top: 5px;
   animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
 }
 
@@ -47,42 +50,31 @@ body {
   }
 }
 
-/* Second line: image and text */
+/* Second line: text and image */
 .second-line {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  margin-bottom: 5px;
 }
 
-/* Slots Image Styling */
 .second-line .slots-image {
-  width: 35%; /* image takes up 45% of the space */
+  width: 37%; /* Adjust image width */
   border-radius: 15%;
+  margin-top: 5px;
   animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
-}
-
-/* Color Changing Animation for Box-Shadow */
-@keyframes boxShadowChange {
-  0% {
-    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
-  }
-  50% {
-    box-shadow: 0 0 10px 5px #4fa3ff, 0 0 25px 5px #4fa3ff, 0 0 5px 5px #4fa3ff; /* Blue */
-  }
-  100% {
-    box-shadow: 0 0 10px 5px #ff6ac3, 0 0 25px 5px #ff6ac3, 0 0 5px 5px #ff6ac3; /* Pink */
-  }
 }
 
 .second-line .slots-text {
-  width: 45%; /* text takes up 45% of the space */
-  text-align: left; /* Align text to the left for larger screens */
+  width: 80%; /* Adjust text width */
+  text-align: center;
+  margin-top: 5px;
 }
 
 /* Text Styling */
 .slots-text h1 {
   font-size: 2em;
-  margin: 20px 0;
+  margin: 50px 0;
 }
 
 .slots-text p {
@@ -92,7 +84,7 @@ body {
 
 .slots-text h2 {
   font-size: 1.8em;
-  margin: 20px 0;
+  margin: 50px 0;
 }
 
 /* Styling for social media links */
@@ -155,7 +147,9 @@ body {
   }
 
   .first-line .slots-image {
-    width: 100%; /* image takes up full width */
+  width: 100%; /* Image takes 45% of the width */
+  margin-bottom: 20px; /* Add space below the image */
+  margin-left: 5%;
   }
 
   /* Second line: text and image stacked on small screens */
@@ -170,7 +164,8 @@ body {
   }
 
   .second-line .slots-image {
-  margin-top: 20%;
+    margin-top: 5%;
     width: 100%; /* image takes up full width */
+  margin-left: 5%
   }
 }

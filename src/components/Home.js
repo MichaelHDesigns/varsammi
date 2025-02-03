@@ -7,7 +7,7 @@ const Home = () => {
       {/* First line: text left and image right */}
       <div className="first-line">
         <div className="home-text">
-        <img src="/images/ring.jpg" alt="Guy" className="home-image" />
+        <img src="/images/ring.jpg" alt="Guy" className="ring-image" />
           <p>Varsammi Meme Coin is where degen culture meets the digital revolution. Built on Solana for speed, efficiency, and pure chaos, just like Varsammi likes to party. It’s not just about a mem coin or party, it’s a movement. Whether you’re here to send it to the moon or just enjoy the ride, one thing’s for sure Varsammi keeps the party going.</p>
         </div>
       </div>

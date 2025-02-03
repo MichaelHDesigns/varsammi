@@ -22,6 +22,7 @@ body {
   padding: 0;
   flex: 1;
   margin: 0; /* To avoid any extra margin */
+  margin-right: 15%;
 }
 
 .navbar-link {
@@ -81,6 +82,7 @@ body {
     flex-direction: column; /* Stack the links vertically */
     align-items: center; /* Center the links */
     margin-top: 20px; /* Add space between social icons and nav links */
+    margin-left: 25%;
   }
 
   .navbar-link {
@@ -90,7 +92,7 @@ body {
 
   .navbar-social {
     justify-content: center; /* Center social icons on small screens */
-    margin-left: 0;
+    margin-left: 10%;
     margin-bottom: 20px; /* Add space between social icons and the nav links */
   }
 }

@@ -4,19 +4,26 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  text-align: center;
 }
 
+/* Container to hold the main content */
 .home-container {
   padding: 20px;
-  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto; /* Centers the container */
 }
 
 /* Home Image Styling */
 .home-image {
   width: 100%;
   height: auto;
-  max-width: 500px;
-  margin: 20px;
+  margin: 20px 0;
   border-radius: 15%;
   animation: boxShadowChange 3s ease infinite; /* Animation to change box-shadow */
 }
@@ -34,53 +41,62 @@ body {
   }
 }
 
-/* First line: image above, text below */
-.first-line {
+/* Flexbox layout for the first and second line: Image + Text */
+.first-line, .second-line {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Adds space between text and image */
+  margin-bottom: 40px;
 }
 
-.first-line .home-image {
-  width: 100%;
-  max-width: 500px;
-  margin-bottom: 20px; /* Adds space between the image and text */
+/* Update .second-line for a column layout */
+.second-line {
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center image and text */
 }
 
-.first-line .home-text {
-  width: 80%; /* Adjust width to prevent excessive stretching */
-  text-align: center;
+.first-line .ring-image {
+  max-width: 80%; /* Image takes 45% of the width */
+  margin-bottom: 20px; /* Add space below the image */
+}
+
+.second-line .home-image {
+  max-width: 28%; /* Image takes 45% of the width */
+  margin-bottom: 20px; /* Add space below the image */
+}
+
+.first-line .home-text,
+.second-line .home-text {
+  width: 45%; /* Text takes 45% of the width */
+  text-align: center; /* Center the text */
 }
 
 /* MoonShot Button styling */
 .moonshot-container {
-  margin-top: 20px;
   text-align: center; /* Center the button */
+  margin-top: 40px;
 }
 
 .moonshot-button {
   padding: 15px 30px;
-  background-color: black; /* Neon Green color */
+  background-color: black;
   color: white;
   font-size: 1.5em;
   text-decoration: none;
   border-radius: 10px;
   display: inline-block;
   transition: background-color 0.3s ease, box-shadow 0.3s ease, text-shadow 0.3s ease;
-  
-  /* Neon glow effect */
-  box-shadow: 0 0 5px 2.5px #FF007F, 0 0 13px 5px #00CFFF; /* Pink and blue neon shadow */
-  text-shadow: 0 0 2px #FF007F, 0 0 5px #00CFFF; /* Text glow */
+  box-shadow: 0 0 5px 2.5px #FF007F, 0 0 13px 5px #00CFFF; /* Neon glow effect */
+  text-shadow: 0 0 2px #FF007F, 0 0 5px #00CFFF;
 }
 
 .moonshot-button:hover {
-  background-color: #00CFFF; /* Hover background color (Pink neon) */
-  color: #FF007F; /* Hover text color (Black for contrast) */
-  
-  /* Opposite neon glow effect on hover */
-  box-shadow: 0 0 5px 2.5px #00CFFF, 0 0 13px 5px #FF007F; /* Blue and pink neon shadow on hover */
-  text-shadow: 0 0 5px #00CFFF, 0 0 5px #FF007F; /* Text glow on hover */
+  background-color: #00CFFF;
+  color: #FF007F;
+  box-shadow: 0 0 5px 2.5px #00CFFF, 0 0 13px 5px #FF007F;
+  text-shadow: 0 0 5px #00CFFF, 0 0 5px #FF007F;
 }
 
 /* Text Styling */
@@ -99,39 +115,25 @@ body {
     text-align: center;
   }
 
-  /* First line: text and image in a stack on small screens */
-  .first-line {
+  /* Stack the images and text vertically on smaller screens */
+  .first-line, .second-line {
     flex-direction: column;
     align-items: center;
   }
 
-  .first-line .home-text, .first-line .home-image {
-    width: 100%; /* make both text and image full width on mobile */
+  .first-line .home-text, .first-line .ring-image {
+    width: 100%; /* Make both text and image full width on mobile */
   }
 
-  /* MoonShot Button styling for mobile */
-  .moonshot-container {
-    margin-top: 20px;
+  .second-line .home-text {
+    width: 100%; /* Make both text and image full width on mobile */
+    height: 50%;
   }
 
-  /* Second line: text and image stacked on small screens */
-  .second-line {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .second-line .home-text, .second-line .home-image {
-    width: 100%; /* make both text and image full width on mobile */
-  }
-
-  .second-line .home-text h2 {
-    font-size: 1.8em;
-  }
-
-  .second-line .home-text p {
-    font-size: 1em;
-    padding: 0 20px;
-  }
+.second-line .home-image {
+  max-width: 85%; /* Image takes 45% of the width */
+  margin-bottom: 20px; /* Add space below the image */
+}
 
   .moonshot-button {
     font-size: 1.2em;
